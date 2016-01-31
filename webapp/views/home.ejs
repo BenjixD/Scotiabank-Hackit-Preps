@@ -7,22 +7,22 @@
 <body>
 
 <div class="col-lg-offset-1">
-<h1>Hello World!</h1>
-<p>Say hello to the server! Or Goodbye if you want.</p>
+    <h1>Hello World!</h1>
+    <p>Say hello to the server! Or Goodbye if you want.</p>
 
-<form method="post">
-    <!--
-	<label for="inputMessage" class="col-lg-1 control-label">Message</label>
-	 <div class="col-lg-6">
-        <input class="form-control" id="hello" name="hello" placeholder="Hello Server!" type="text"> </input>
-     </div>
-     </br>
-     </br>
-    -->
-	<button type="submit" class="btn btn-primary" value="Hello Server!" id="button" name="button"> Hello Server! </button>
-    <button type="submit" class="btn btn-primary" value="Goodbye Server!" id="button" name="button"> Goodbye Server! </button>
-
-</form>
+    <form action="/csc369" method="post" >
+        <div class="form-group">
+            <label class="control-label">Email:</label>
+            <input type="text" name="email" required class="form-control" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Password:</label>
+            <input type="password" name="password" required class="form-control">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</button>
+        </div>
+    </form>
 </div>
 </body>
 
