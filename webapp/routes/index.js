@@ -20,7 +20,7 @@ router.get('/loans', function(req, res){
 			listofLoans.push(data[i]);
 		};
 
-		res.render('Mortgage', {loans: listofLoans})
+		res.render('Home', { loans: listofLoans});
 	});
 
 
@@ -31,26 +31,12 @@ router.post('/loans', function(req, res){
 });
 
 router.post('/csc369', function(req, res){
-
-		var leo = new user();
-		leo.email = req.body.email;
-		leo.name = "leo";
-		leo.password = req.body.password;
-
-		leo.save(function (err) {
-  			console.log('Saved!');
-		});
-
-		//res.render('somepage',{ name: leo.name, password: leo.password});
-		res.redirect('/csc369');
+	res.redirect('/csc369');
 });
 
 router.get('/csc369', function(req,res){
 	
-	user.findOne({ name: 'leo' }, function(err, data) {
-  		console.log(data); 
-  		res.render('somepage', { account: data });
-	});
+	res.send("Hello world");
 });
 
 
