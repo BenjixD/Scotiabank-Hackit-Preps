@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
-var schema = mongoose.Schema;
 
 
-var loansSchema = new Schema({
+
+var loansSchema = mongoose.Schema({
  name: String,
  userID: String,
  status: {type: String, default:"ongoing"},	// Possible statuses: cancelled, ongoing, completed
@@ -12,12 +12,12 @@ var loansSchema = new Schema({
  purpose: String,
  startDate: String,
  expectedEndDate: String,
- total: Number;
- currentBalance: Number;
- frequency: Number;
- installmentSum: Number;
+ total: Number,
+ currentBalance: Number,
+ frequency: Number,
+ installmentSum: Number,
  notes: String,
  history: Array
 });
 
-module.export = mongoose.Model('Loans', loansSchema);
+module.exports = mongoose.model('Loans', loansSchema);

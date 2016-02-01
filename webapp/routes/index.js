@@ -20,7 +20,7 @@ router.get('/loans', function(req, res){
 			listofLoans.push(data[i]);
 		};
 
-		res.render('Morgage', {loans: listofLoans})
+		res.render('Mortgage', {loans: listofLoans})
 	});
 
 

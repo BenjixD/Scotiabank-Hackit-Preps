@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
-var userSchema = new Schema({
+var userSchema = mongoose.Schema({
 	name: String,
 	nationality: String,
 	age: {type: Number, default: 0},
@@ -12,4 +11,4 @@ var userSchema = new Schema({
 	loans:Array
 });
 
-module.exports = mongoose.Model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);

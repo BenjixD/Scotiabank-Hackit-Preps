@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
-var schema = mongoose.Schema;
 
-var historySchema = new Schema({
+var historySchema = mongoose.Schema({
 	loanID:String,
 	userID:String,
 	issueDate:String,
@@ -9,4 +8,4 @@ var historySchema = new Schema({
 	status:String
 });
 
-module.export = mongoose.Model('History', historySchema);
+module.exports = mongoose.model('History', historySchema);
