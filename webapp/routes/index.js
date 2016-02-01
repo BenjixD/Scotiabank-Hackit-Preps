@@ -13,15 +13,18 @@ router.post('/', function(req, res, next) {
 });
 
 router.get('/loans', function(req, res){
+	
 	var listofLoans = [];
+	/*
 	loanCollection.find({}, function(err, data) {
 
 		for (var i = data.length - 1; i >= 0; i--) {
 			listofLoans.push(data[i]);
 		};
 
-		res.render('Home', { loans: listofLoans});
-	});
+		res.render('Home');
+	});*/
+res.redirect('/csc369');
 
 
 });
