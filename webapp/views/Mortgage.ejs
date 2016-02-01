@@ -20,17 +20,20 @@
         <table class="table table-hover">
           <thread>
             <tr>
-                <th>Kantai Collection</th>
-                <th>Guilty Crown</th>
-                <th>Love Live</th>
-                <th> </th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Balance</th>
+                <th>Expected End Date</th>
             </tr>
           </thread>
 
           <tbody>
             <% for(var i=0; i<loans.length; i++) {%>
               <tr>
-                  <td><%= loans[i] %></td>           
+                  <td><%= loans[i].names %></td>
+                  <td><%= loans[i].total %></td>
+                  <td><%= loans[i].currentBalance %></td>
+                  <td><%= loans[i].expectedEndDate %></td>
               </tr>
             <% } %>
           </tbody>
