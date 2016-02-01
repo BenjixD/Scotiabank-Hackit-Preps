@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
   res.render('Home', { title: 'Home' });
 });
 
-router.get('/', function(req, res){
+router.get('/loans', function(req, res){
 	var listofLoans = [];
 	loanCollection.find({}, function(err, data) {
 
