@@ -14,7 +14,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 //connect to database server
-mongoose.connect('mongodb://localhost/Scotia');
+mongoose.connect('mongodb://localhost:27017/Scotia');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
