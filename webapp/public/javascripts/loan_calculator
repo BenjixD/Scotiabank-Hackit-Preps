@@ -1,0 +1,4 @@
+function expected_loan_completion(start_date, interest_rate, payment, balance)
+{
+	
+}
